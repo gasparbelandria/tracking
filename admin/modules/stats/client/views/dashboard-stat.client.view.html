@@ -1,0 +1,16 @@
+<section data-ng-controller="StatsDashboardController" data-ng-init="dashboard()">
+    <div class="page-header">
+        <h1>Dashboard</h1>
+    </div>
+    <div class="col-md-12">
+        <input type="range" min="1" max="12" id="nMonth" value="1">
+        <br />
+        <span id="month">January</span>
+        <div id="chart" class="svg" style="border:0px solid blue"></div>
+        <div id="legend"></div>
+        <!--<br />-->
+        <!--Rotate donut:<br />-->
+        <!--<input type="range" min="1" max="360" id="nAngle" value="1">-->
+        <script src="slide.js"></script>
+    </div>
+</section>

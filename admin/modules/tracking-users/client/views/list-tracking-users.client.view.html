@@ -1,0 +1,17 @@
+<section data-ng-controller="TrackingUsersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Tracking Users</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="trackingUser in trackingUsers" data-ng-href="/#!/tracking-users/{{trackingUser._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				<span data-ng-bind="trackingUser.login.loginId"></span>
+				<span data-ng-bind="trackingUser.user.displayName"></span>
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="trackingUser.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!trackingUsers.$resolved || trackingUsers.length">
+    	No Tracking users yet, why don't you <a href="/#!/tracking-users/create">create one</a>?
+    </div>
+</section>
