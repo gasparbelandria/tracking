@@ -1,6 +1,7 @@
 # OS
 # ===========
 .DS_Store
+.idea
 ehthumbs.db
 Icon?
 Thumbs.db
@@ -72,3 +73,5 @@ mongod
 *.ntvs*
 *.njsproj
 *.sln
+
+
