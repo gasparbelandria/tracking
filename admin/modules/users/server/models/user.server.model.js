@@ -49,6 +49,24 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  phone: {
+    type: String,
+    default: '',
+    required: false,
+    trim: true
+  },
+  cellphone: {
+    type: String,
+    default: '',
+    required: false,
+    trim: true
+  },
+  fax: {
+    type: String,
+    default: '',
+    required: false,
+    trim: true
+  },
   email: {
     type: String,
     trim: true,

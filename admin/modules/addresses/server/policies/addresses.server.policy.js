@@ -9,34 +9,34 @@ var acl = require('acl');
 acl = new acl(new acl.memoryBackend());
 
 /**
- * Invoke Tickets Permissions
+ * Invoke Addresses Permissions
  */
 exports.invokeRolesPolicies = function() {
 	acl.allow([{
 		roles: ['admin'],
 		allows: [{
-			resources: '/api/tickets',
+			resources: '/api/addresses',
 			permissions: '*'
 		}, {
-			resources: '/api/tickets/:ticketId',
+			resources: '/api/addresses/:addressId',
 			permissions: '*'
 		}]
 	}, {
 		roles: ['user'],
 		allows: [{
-			resources: '/api/tickets',
+			resources: '/api/addresses',
 			permissions: ['get', 'post']
 		}, {
-			resources: '/api/tickets/:ticketId',
+			resources: '/api/addresses/:addressId',
 			permissions: ['get']
 		}]
 	}, {
 		roles: ['guest'],
 		allows: [{
-			resources: '/api/tickets',
+			resources: '/api/addresses',
 			permissions: ['get']
 		}, {
-			resources: '/api/tickets/:ticketId',
+			resources: '/api/addresses/:addressId',
 			permissions: ['get']
 		}]
 	}]);
@@ -48,8 +48,14 @@ exports.invokeRolesPolicies = function() {
 exports.isAllowed = function(req, res, next) {
 	var roles = (req.user) ? req.user.roles : ['guest'];
 
-	// If an ticket is being processed and the current user created it then allow any manipulation
-	if (req.ticket && req.user) { //  && req.ticket.user.id === req.user.id
+	// If an address is being processed and the current user created it then allow any manipulation
+
+	//console.log(req);
+	//console.log(req.address);
+	//console.log(req.address.user);
+	//console.log(req.address.user.id);
+
+	if (req.address && req.user) { //  && req.address.user.id === req.user.id
 		return next();
 	}
 
