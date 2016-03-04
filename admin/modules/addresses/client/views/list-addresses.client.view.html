@@ -7,10 +7,8 @@
 			<small class="list-group-item-text">
 				Posted on
 				<span data-ng-bind="address.created | date:'medium'"></span>
-				by
-				<span data-ng-bind="address.user.displayName"></span>
 			</small>
-			<h4 class="list-group-item-heading" data-ng-bind="address.name"></h4>
+			<h4 class="list-group-item-heading" data-ng-bind="address.street"></h4>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!addresses.$resolved || addresses.length">

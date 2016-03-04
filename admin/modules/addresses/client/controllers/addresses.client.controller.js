@@ -9,7 +9,11 @@ angular.module('addresses').controller('AddressesController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Address object
 			var address = new Addresses ({
-				name: this.name
+				street: this.street,
+				city: this.city,
+				state: this.state,
+				zip: this.zip,
+				country: this.country
 			});
 
 			// Redirect after save

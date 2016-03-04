@@ -6,9 +6,33 @@
         <form class="form-horizontal" data-ng-submit="update()" novalidate>
             <fieldset>
                 <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
+                    <label class="control-label" for="street">Street</label>
                     <div class="controls">
-                        <input type="text" data-ng-model="address.name" id="name" class="form-control" placeholder="Name" required>
+                        <input type="text" data-ng-model="address.street" id="street" class="form-control" placeholder="Street" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="city">City</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="address.city" id="city" class="form-control" placeholder="City" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="state">State</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="address.state" id="state" class="form-control" placeholder="State" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="zip">Zip</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="address.zip" id="zip" class="form-control" placeholder="Zip" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="country">Country</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="address.country" id="country" class="form-control" placeholder="Country" required>
                     </div>
                 </div>
                 <div class="form-group">
