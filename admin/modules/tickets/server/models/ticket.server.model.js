@@ -58,6 +58,12 @@ var TicketSchema = new Schema({
 		required: 'Please fill Items',
 		trim: true
 	},
+	status: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now

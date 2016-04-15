@@ -16,7 +16,8 @@ angular.module('tickets').controller('TicketsController', ['$scope', '$statePara
 				tax: this.tax,
 				discount: this.discount,
 				eta: this.eta,
-				percent: this.percent
+				percent: this.percent,
+				status: this.status
 			});
 
 			// Redirect after save
@@ -32,6 +33,7 @@ angular.module('tickets').controller('TicketsController', ['$scope', '$statePara
 				$scope.discount = '';
 				$scope.eta = '';
 				$scope.percent = '';
+				$scope.status = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

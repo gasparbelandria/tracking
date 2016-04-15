@@ -1,0 +1,35 @@
+<section data-ng-controller="TdetailsController" data-ng-init="findOne()">
+    <div class="page-header">
+        <h1>Edit Tdetail</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="update()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="ticket">Ticket</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="tdetail.ticket" id="ticket" class="form-control" placeholder="Ticket" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="note">Note</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="tdetail.note" id="note" class="form-control" placeholder="Note" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="status">Status</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="tdetail.status" id="status" class="form-control" placeholder="Status" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Update" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
