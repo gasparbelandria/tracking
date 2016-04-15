@@ -10,10 +10,28 @@ var mongoose = require('mongoose'),
  * Product Schema
  */
 var ProductSchema = new Schema({
+	category: {
+		type: String,
+		default: '',
+		required: 'Please fill Category',
+		trim: true
+	},
 	name: {
 		type: String,
 		default: '',
 		required: 'Please fill Product name',
+		trim: true
+	},
+	image: {
+		type: String,
+		default: '',
+		required: 'Please fill Image',
+		trim: true
+	},
+	url: {
+		type: String,
+		default: '',
+		required: 'Please fill Url',
 		trim: true
 	},
 	created: {
@@ -21,8 +39,7 @@ var ProductSchema = new Schema({
 		default: Date.now
 	},
 	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
+		type: Schema.ObjectId
 	}
 });
 

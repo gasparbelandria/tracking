@@ -9,7 +9,10 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 		$scope.create = function() {
 			// Create new Product object
 			var product = new Products ({
-				name: this.name
+				category: this.category,
+				name: this.name,
+				image: this.image,
+				url: this.url
 			});
 
 			// Redirect after save
@@ -17,7 +20,10 @@ angular.module('products').controller('ProductsController', ['$scope', '$statePa
 				$location.path('products/' + response._id);
 
 				// Clear form fields
+				$scope.category = '';
 				$scope.name = '';
+				$scope.image = '';
+				$scope.url = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

@@ -49,7 +49,7 @@ exports.isAllowed = function(req, res, next) {
 	var roles = (req.user) ? req.user.roles : ['guest'];
 
 	// If an product is being processed and the current user created it then allow any manipulation
-	if (req.product && req.user && req.product.user.id === req.user.id) {
+	if (req.product && req.user) { //  && req.product.user.id === req.user.id
 		return next();
 	}
 
