@@ -2,7 +2,8 @@
 	<div class="page-header">
 		<h1 data-ng-bind="status.name"></h1>
 	</div>
-	<div class="pull-right" data-ng-show="authentication.user._id == status.user._id">
+	<div class="pull-right">
+		<!--data-ng-show="authentication.user._id == status.user._id"-->
 		<a class="btn btn-primary" href="/#!/statuses/{{status._id}}/edit">
 			<i class="glyphicon glyphicon-edit"></i>
 		</a>

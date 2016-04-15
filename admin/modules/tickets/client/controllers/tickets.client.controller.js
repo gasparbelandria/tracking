@@ -9,7 +9,14 @@ angular.module('tickets').controller('TicketsController', ['$scope', '$statePara
 		$scope.create = function() {
 			// Create new Ticket object
 			var ticket = new Tickets ({
-				name: this.name
+				number: this.number,
+				address: this.address,
+				items: this.items,
+				price: this.price,
+				tax: this.tax,
+				discount: this.discount,
+				eta: this.eta,
+				percent: this.percent
 			});
 
 			// Redirect after save
@@ -17,7 +24,14 @@ angular.module('tickets').controller('TicketsController', ['$scope', '$statePara
 				$location.path('tickets/' + response._id);
 
 				// Clear form fields
-				$scope.name = '';
+				$scope.number = '';
+				$scope.address = '';
+				$scope.items = '';
+				$scope.price = '';
+				$scope.tax = '';
+				$scope.discount = '';
+				$scope.eta = '';
+				$scope.percent = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

@@ -6,9 +6,51 @@
         <form class="form-horizontal" data-ng-submit="update()" novalidate>
             <fieldset>
                 <div class="form-group">
-                    <label class="control-label" for="name">Name</label>
+                    <label class="control-label" for="number">Number</label>
                     <div class="controls">
-                        <input type="text" data-ng-model="ticket.name" id="name" class="form-control" placeholder="Name" required>
+                        <input type="text" data-ng-model="ticket.number" id="number" class="form-control" placeholder="Number" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="address">Address</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.address" id="address" class="form-control" placeholder="Address" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="items">Items</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.items" id="items" class="form-control" placeholder="Items" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="price">Price</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.price" id="price" class="form-control" placeholder="Price" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="tax">Tax</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.tax" id="tax" class="form-control" placeholder="Tax" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="discount">Discount</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.discount" id="discount" class="form-control" placeholder="Discount" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="eta">Estimate Time Arrived</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.eta" id="eta" class="form-control" placeholder="Estimate Time Arrived" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label" for="percent">Percent</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="ticket.percent" id="percent" class="form-control" placeholder="Percent" required>
                     </div>
                 </div>
                 <div class="form-group">

@@ -10,10 +10,52 @@ var mongoose = require('mongoose'),
  * Ticket Schema
  */
 var TicketSchema = new Schema({
-	name: {
+	number: {
 		type: String,
 		default: '',
-		required: 'Please fill Ticket name',
+		required: 'Please fill Number',
+		trim: true
+	},
+	address: {
+		type: String,
+		default: '',
+		required: 'Please fill Address',
+		trim: true
+	},
+	items: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
+	price: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
+	tax: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
+	discount: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
+	eta: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
+		trim: true
+	},
+	percent: {
+		type: String,
+		default: '',
+		required: 'Please fill Items',
 		trim: true
 	},
 	created: {
