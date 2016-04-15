@@ -21,9 +21,23 @@ var TicketSchema = new Schema({
 		default: Date.now
 	},
 	user: {
-		type: Schema.ObjectId,
-		//ref: 'User'
+		type: Schema.ObjectId
 	}
 });
 
 mongoose.model('Ticket', TicketSchema);
+
+//title
+//description
+//addressId
+//carId or packageId
+//rate
+//status (open, close, re-open)
+//transport (aerea, terrestre, maritima)
+//eta
+//percent
+//fragile
+
+
+
+
