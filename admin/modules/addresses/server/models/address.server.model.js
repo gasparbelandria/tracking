@@ -28,10 +28,10 @@ var AddressSchema = new Schema({
 		required: 'Please fill Tracking user state',
 		trim: true
 	},
-	zip: {
+	nickname: {
 		type: String,
 		default: '',
-		required: 'Please fill Tracking user zip',
+		required: 'Please fill Nickname',
 		trim: true
 	},
 	country: {

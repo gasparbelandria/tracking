@@ -12,7 +12,7 @@ angular.module('addresses').controller('AddressesController', ['$scope', '$state
 				street: this.street,
 				city: this.city,
 				state: this.state,
-				zip: this.zip,
+				nickname: this.nickname,
 				country: this.country
 			});
 

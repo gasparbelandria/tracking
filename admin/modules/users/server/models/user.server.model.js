@@ -45,10 +45,6 @@ var UserSchema = new Schema({
     default: '',
     validate: [validateLocalStrategyProperty, 'Please fill in your last name']
   },
-  displayName: {
-    type: String,
-    trim: true
-  },
   phone: {
     type: String,
     default: '',
@@ -78,6 +74,18 @@ var UserSchema = new Schema({
     type: String,
     unique: 'Username already exists',
     required: 'Please fill in a username',
+    trim: true
+  },
+  citizencode: {
+    type: String,
+    unique: 'Username already exists',
+    required: 'Please fill Citizen Code',
+    trim: true
+  },
+  usercode: {
+    type: String,
+    unique: 'Username already exists',
+    required: 'Please fill User Code',
     trim: true
   },
   password: {

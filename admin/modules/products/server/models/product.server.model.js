@@ -34,6 +34,12 @@ var ProductSchema = new Schema({
 		required: 'Please fill Url',
 		trim: true
 	},
+	price: {
+		type: String,
+		default: '',
+		required: 'Please fill Price',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now

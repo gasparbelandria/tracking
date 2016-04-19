@@ -75,16 +75,6 @@ var TicketSchema = new Schema({
 
 mongoose.model('Ticket', TicketSchema);
 
-//title
-//description
-//addressId
-//carId or packageId
-//rate
-//status (open, close, re-open)
-//transport (aerea, terrestre, maritima)
-//eta
-//percent
-//fragile
 
 
 
